@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafío HTML & CSS - ¡Bienvenida!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="contenedor-principal">
+      <section id="identificacion-heroe" class="fase">
+        <h2>¡Registra tu Nombre de Leyenda! ⚔️</h2>
+        <form id="form-identificacion">
+          <div class="form-grupo">
+            <label for="nombre">Nombre de Pila (¡Tu alias de Héroe!):</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-grupo">
+            <label for="apellido">Apellido (¡El Legado de tu Clan!):</label>
+            <input type="text" id="apellido" name="apellido" required />
+          </div>
+          <button type="submit" class="boton-principal">
+            ¡Estoy Listo para el Desafío!
+          </button>
+        </form>
+      </section>
+
+      <section id="seleccion-dificultad" class="fase oculto">
+        <h2>¡Elige tu Nivel de Conquista! 🗺️</h2>
+        <div class="botones-dificultad">
+          <button data-dificultad="basico">
+            🛡️ Aspirante Web (Básico HTML y CSS)
+            <div class="descripcion-nivel">
+              Conceptos fundamentales y sintaxis esencial.
+            </div>
+          </button>
+          <button data-dificultad="medio">
+            ⚔️ Guerrero del Código (Nivel Medio HTML y CSS)
+            <div class="descripcion-nivel">
+              Selectores avanzados, Flexbox, Grid y más.
+            </div>
+          </button>
+          <button data-dificultad="senior">
+            👑 Maestro/a del DOM (Nivel Senior HTML y CSS)
+            <div class="descripcion-nivel">
+              Patrones complejos, optimización y accesibilidad.
+            </div>
+          </button>
+        </div>
+        <button id="btn-comenzar-prueba" class="boton-principal oculto">
+          ¡Comenzar la Prueba!
+        </button>
+      </section>
+
+      <section id="quiz-arena" class="fase oculto">
+        <h2>Arena del Quiz 🧠</h2>
+        <p id="indicador-progreso" class="indicador-progreso"></p>
+        <div
+          id="temporizador-display"
+          class="temporizador-display oculto"
+        ></div>
+        <div id="pregunta-container"></div>
+        <div class="contenedor-boton-quiz-fijo">
+          <button id="btn-siguiente-pregunta" class="boton-principal">
+            Siguiente Pregunta
+          </button>
+        </div>
+      </section>
+
+      <section id="salon-fama" class="fase oculto">
+        <h2>Salón de la Fama 🏆</h2>
+      </section>
+
+      <section id="revision-respuestas" class="fase oculto">
+        <h2 id="titulo-revision-respuestas">
+          El Detalle de tu Aventura, [Nombre del Héroe]
+        </h2>
+        <div id="lista-respuestas"></div>
+        <button class="boton-principal" id="btn-volver-salon-fama">
+          Volver al Salón de la Fama
+        </button>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
